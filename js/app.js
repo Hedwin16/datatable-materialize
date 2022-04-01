@@ -18,8 +18,8 @@
     /* Set the defaults for DataTables initialisation */
     $.extend(true, DataTable.defaults, {
       dom: 
-      "<'hiddensearch col s9 m11'f'>" +
-      "<' col s3 m1 data-select''l'>" +
+      "<'hiddensearch col s9 m10'f'>" +
+      "<'col s3 m2 data-select''l'>" +
       "tr" +
       "<'table-footer'ip'>",
       renderer: 'material'
@@ -200,16 +200,15 @@ $(document).ready(function() {
       "sInfoFiltered":   "(filtrado de _MAX_ entradas totales)",
       "sInfo": "_START_ -_END_ de _TOTAL_",
       "sLengthMenu": '<select class="browser-default data-sl grey-text text-darken-1">' +
-      '<option value="10">Filas: 10 </option>' +
-      '<option value="20">Filas: 20</option>' +
-      '<option value="30">Filas: 30</option>' +
-      '<option value="40">Filas: 40</option>' +
-      '<option value="50">Filas: 50</option>' +
-      '<option value="-1">Todas</option>' +
+      '<option value="10">Datos: 10 </option>' +
+      '<option value="20">Datos: 20</option>' +
+      '<option value="30">Datos: 30</option>' +
+      '<option value="40">Datos: 40</option>' +
+      '<option value="50">Datos: 50</option>' +
+      '<option value="-1">Todos</option>' +
       '</select></div>'
     },
     bAutoWidth: false
     
   });
 });
-
