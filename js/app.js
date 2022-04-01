@@ -4,17 +4,22 @@
     "use strict";
 
     $('.search-toggle').click(function() {
-      if ($('.hiddensearch').css('display') == 'none')
+      if ($('.hiddensearch').css('display') == 'none'){
         $('.hiddensearch').slideDown();
-      else
+        // $('.data-select').removeClass("offset-s9 offset-m11");
+      }else{
+         
         $('.hiddensearch').slideUp(); 
+        // $('.data-select').addClass("offset-s9 offset-m11")
+      }
+
     });
 
     /* Set the defaults for DataTables initialisation */
     $.extend(true, DataTable.defaults, {
       dom: 
-      "<'sel''l'>" +
-      "<'hiddensearch'f'>" +
+      "<'hiddensearch col s9 m11'f'>" +
+      "<' col s3 m1 data-select''l'>" +
       "tr" +
       "<'table-footer'ip'>",
       renderer: 'material'
@@ -190,18 +195,17 @@ $(document).ready(function() {
       "sStripClasses": "",
       "sSearch": "",
       "sSearchPlaceholder": "Búsqueda",
-      "sZeroRecords" : "<p class='center'>  No se encuentran coincidencias </p>",
+      "sZeroRecords" : "<p class='center grey-text text-darken-1'>  No se encuentran coincidencias </p>",
       "sInfoEmpty":      "Mostrando 0 de 0 entradas",
       "sInfoFiltered":   "(filtrado de _MAX_ entradas totales)",
       "sInfo": "_START_ -_END_ de _TOTAL_",
-      "sLengthMenu": '<select class="browser-default col s1 offset-s11">' +
-      '<option value="10">10</option>' +
-      '<option value="20">20</option>' +
-      '<option value="30">30</option>' +
-      '<option value="40">40</option>' +
-      '<option value="50">50</option>' +
-      '<option value="60">60</option>' +
-      '<option value="-1">All</option>' +
+      "sLengthMenu": '<select class="browser-default data-sl grey-text text-darken-1">' +
+      '<option value="10">Filas: 10 </option>' +
+      '<option value="20">Filas: 20</option>' +
+      '<option value="30">Filas: 30</option>' +
+      '<option value="40">Filas: 40</option>' +
+      '<option value="50">Filas: 50</option>' +
+      '<option value="-1">Todas</option>' +
       '</select></div>'
     },
     bAutoWidth: false
